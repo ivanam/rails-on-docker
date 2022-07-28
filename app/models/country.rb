@@ -5,7 +5,7 @@ class Country < ApplicationRecord
     validates :name, presence: true
 
     def get_languages
-      lista =" "
+      lista =""
       self.languages.each do |hash|  
         lista =  lista + ", #{hash["native"]} (#{hash["code"]})" if lista != ""
         lista = "#{hash["native"]} (#{hash["code"]})" if lista == ""

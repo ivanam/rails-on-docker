@@ -11,6 +11,9 @@
         <dt>Moneda: <%= @traceip.country.currency.code %>(1 <%=@traceip.country.currency.name%> = <%=@traceip.country.currency.convert%> U$S)</dt>
         <dt>Distancia:<%= @traceip.distance %> kms (-34, -64) a (40, -4) </dt>
       </dl>
+      <dt>Distancia más lejana a Buenos Aires desde la cual se haya consultado el servicio:<%=@traceip.get_min_distance %> kms </dt>
+      <dt>Distancia más cercana a Buenos Aires desde la cual se haya consultado el servicio: <%= @traceip.get_mas_distance %> kms </dt>
+      <dt>Distancia promedio de todas las ejecuciones que se hayan hecho del servicio.<%= @traceip.get_avg_distance %> kms</dt>
     </div>
   </div>
 </div>

@@ -80,6 +80,18 @@ class Traceip < ApplicationRecord
         JSON.parse(response.read_body)["currency"]
     
     end
+
+    def get_min_distance
+        Traceip.all.minimum(:distance)
+    end
+
+    def get_mas_distance
+        Traceip.all.maximum(:distance)
+    end
+
+    def get_avg_distance
+        Traceip.all.average(:distance) 
+    end
     
 end
 
